@@ -1,0 +1,57 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  .experience-item {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .experience-item:nth-child(1) { animation-delay: 0.1s; }
+  .experience-item:nth-child(2) { animation-delay: 0.2s; }
+  .experience-item:nth-child(3) { animation-delay: 0.3s; }
+  .experience-item:nth-child(4) { animation-delay: 0.4s; }
+  .experience-item:nth-child(5) { animation-delay: 0.5s; }
+  
+  @media print {
+    body {
+      background-color: white;
+    }
+    
+    .container {
+      max-width: none;
+      padding: 0;
+    }
+    
+    header, footer {
+      background: none !important;
+      color: black !important;
+    }
+    
+    .bg-white {
+      box-shadow: none !important;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    header {
+      padding: 2rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
